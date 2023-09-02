@@ -4,7 +4,7 @@
 
 ### Quick description
 
-Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As variáveis são armazenadas referenciando endereço de memória, fazendo com que seja possíveis várias variáveis apontarem para mesmo endereço reduzindo consumo de memória. Suas classes possuem atributos e comporamentos quando instanciadas. O escopo da linguagem é fechado com indentação de código e não blocos. As funções podem receber parâmetros obrigatórios `no-default arguments` como opcionais `default arguments`, além disso em sua chamada esses parâmetros podem ser passados de forma posicional ou nomeadas também conhecido como `keywords arguments`. Atributos protected/private devem ter `undescore` em sua declação como exemplo: "_variable"
+Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As variáveis são armazenadas referenciando endereço de memória, fazendo com que seja possíveis várias variáveis apontarem para mesmo endereço reduzindo consumo de memória. Suas classes possuem atributos e comporamentos quando instanciadas. O escopo da linguagem é fechado com indentação de código e não blocos. As funções podem receber parâmetros obrigatórios `no-default arguments` como opcionais `default arguments`, além disso em sua chamada esses parâmetros podem ser passados de forma posicional ou nomeadas também conhecido como `keywords arguments`. Atributos protected/private devem ter `undescore` em sua declação como exemplo: "_variable". No desenvolvimento de API's é usual quando trabalhar com data/hora usar UTC-0 de acordo com padrão `ISO 8601`. Em testes a utilização de mocks é ideal para simular condições reais não fazendo requisições externas ou consumindo muito recursos da máquina, é ideal utilizar a cobertura completa de testes no projeto `text coverage`.
 
 **Os principais tipos primitivos são:**
   - String `"Hello world"`
@@ -89,6 +89,8 @@ Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As va
 
 **Principais métodos estruturas de dados:**
 
+### Listas
+
   - Listas
   - Listas: `variable = [10, 8]`
   - Listas Append: `variable.append(10)`
@@ -100,8 +102,12 @@ Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As va
   - Listas (Matriz): variable = `[[2, 5], [1, 6]]`
   - Listas Length: `len(variable)`
 
+### Tuplas
+
   - Tuplas: `variable = 5, 10, True`
   - Listas/Tuplas desempacotamento: `first, second, cond = variable`
+
+### Conjuntos
 
   - Conjuntos: `variable = {"Name", "Lastname", 10}`
   - Conjuntos: `variable = set(["Name", "Lastname", 10])`
@@ -122,11 +128,19 @@ Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As va
       variable - variable_2
       ```
 
+### Dicionários
+
   - Dicionários: `variable = {"key": value}`
   - Dicionários key: `variable["key"]`
   - Dicionários keys: `variable.keys()`
   - Dicionários values: `variable.values()`
   - Dicionários items: `variable.items()`
+  - Dicionários unios: `dict({"id": 1, **old_dict})`
+  - Dicionários JSON:
+      ```
+      json.dumps(json_variable)
+      json.loads(dict_variable)
+      ```
 
 **Funções:**
   ```
@@ -199,6 +213,9 @@ Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As va
 - VENV deactivate: `deactivate`
 - VENV dependencies:
     ```
+    pip list
+    pip freeze
+    pip freeze > requirements.txt
     pip install <dependency-name>
     pip install -r requirements.txt
     ```
@@ -222,7 +239,13 @@ Aplicação deve ser conter as urls do endpoint, e seus templates ser importados
 - Django DBShell: `python manage.py dbshell`
 - Django PyShell: `python manage.py shell`
 - Django Superuser: `python manage.py createsuperuser`
-- Django Test: `python manage.py test`
+- Django Test:
+      ```
+      python manage.py test
+      pytest
+      pytest --cov
+      ```
+- Django Settings: `DJANGO_SETTINGS_MODULE=api.settings.prod python manage.py runserver`
 
 ### Shell
 
