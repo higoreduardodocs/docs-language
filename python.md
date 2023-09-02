@@ -197,7 +197,11 @@ Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As va
 - VENV create: `python3 -m venv venv`
 - VENV activate: `source ./venv/bin/activate`
 - VENV deactivate: `deactivate`
-- VENV dependencies: `pip install <dependency-name>`
+- VENV dependencies:
+    ```
+    pip install <dependency-name>
+    pip install -r requirements.txt
+    ```
 
 ## Flask commands
 
@@ -206,7 +210,9 @@ Linguagem dinâmica, possui IDLE (python3) já no instalador da linguagem. As va
 
 ## Django commands
 
-Aplicação deve ser conter as urls do endpoint, e seus templates ser importados na raíz `<settings.py -> INSTALLED_APPS>`. O acesso admin da aplicação é em `http://localhost:3000/admin` e para cada modelo a ser manipulado pelo superadmin deve ser exposto na page admin do prórpio app.
+Aplicação deve ser conter as urls do endpoint, e seus templates ser importados na raíz `<settings.py -> INSTALLED_APPS>`. O acesso admin da aplicação é em `http://localhost:3000/admin` e para cada modelo a ser manipulado pelo superadmin deve ser exposto na page admin do próprio app.
+
+### Django
 
 - Django Create: `django-admin startproject <project-name> .`
 - Django Create app: `django-admin startapp <app-name>`
@@ -218,9 +224,13 @@ Aplicação deve ser conter as urls do endpoint, e seus templates ser importados
 - Django Superuser: `python manage.py createsuperuser`
 - Django Test: `python manage.py test`
 
+### Shell
+
 - DbShell Tables: `.tables`
 - DbShell Header: `.header ON`
 - DbShell Null: `.nullvalue NULL`
+
+### PyShell
 
 - PyShell ORM Import: `from agenda.models import Categoria, Evento`
 - PyShell ORM Create: `Categoria.objects.create(nome="BackEnd")`
