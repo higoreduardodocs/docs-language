@@ -7,7 +7,7 @@
   docker build .
   docker build . -t <file-name>
   docker build . --tag <username>/<repository-name>:<version>
-  docker compose -f <docker-compose.yml> up build
+  docker compose -f <docker-compose.yml> build
   ```
 
 - Start: `docker start <container-id|container-name>`
@@ -54,8 +54,8 @@
 
 - Exec:
   ```
-  docker exec -it <service-name> <function>
-  docker exec <service-name> <function>
+  docker exec -it <container-name> <function>  
+  docker exec -it <container-mongo> mongo -u "<username>" -p "<password>"
   docker compose exec <service-name> <function>
   ```
 - Logs:
