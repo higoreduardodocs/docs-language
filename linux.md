@@ -10,5 +10,27 @@
   touch <file-name>
   open <file-name>
   cat <file-name>
+  less <file-name>
+  rm -rf <folder-name|file-name>
+  ls -ltra
+  ls -la
   ```
 - Path: `echo $PATH`
+- Get Ip: `nslookup <url>`
+- Encriptografia:
+  ```
+  md5 <file-name>
+  shasum <file-name>
+  shasum -a 256 <file-name>
+  shasum -a 512 <file-name>
+  ```
+- OpenSSL:
+  ```
+  openssl
+  openssl genrsa
+  openssl genrsa -aes256
+  openssl genrsa -aes256 -out private.pem
+  openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+  openssl genrsa -des3
+  openssl genrsa 4096
+  ```
