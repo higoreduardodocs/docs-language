@@ -118,6 +118,7 @@
   docker stack services <app-name>
   docker stack ps <app-name>
   ```
+- Swarm access: `http://<ip-address>`
 
 - Login: `docker login <username>`
 - Push: `docker push <username>/<repository-name>:<version>`
