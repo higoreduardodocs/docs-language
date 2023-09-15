@@ -120,5 +120,17 @@
   ```
 - Swarm access: `http://<ip-address>`
 
-- Login: `docker login <username>`
-- Push: `docker push <username>/<repository-name>:<version>`
+- Docker hub:
+  ```
+  docker login
+  docker logout
+  cat /home/<username>/.docker/config.json
+
+  docker image tag <local-image-name> <username>/<repository-name>:<version>
+  docker push <username>/<repository-name>:<version>
+  docker compose -f <docker-compose.yml> push <username>/<repository-name>:<version>
+  
+  docker pull <username>/<repository-name>:<version>
+  docker compose -f <docker-compose.yml> pull
+  docker compose -f <docker-compose.yml> pull <service-name>
+  ```
