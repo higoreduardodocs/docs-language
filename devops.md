@@ -107,7 +107,7 @@
   ```
   ip addr [eth0]
   docker swarm init --advertise-addr <ip-address>
-  ENV_SETUP=value docker compose -f <docker-compose.yml> build
+  docker compose -f <docker-compose.yml> build
   ENV_SETUP=value docker stack deploy -c <docker-compose.yml> <app-name>
   ```
 - Swarm list:
