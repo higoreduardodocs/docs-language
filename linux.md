@@ -15,6 +15,14 @@
   ls -ltra
   ls -la
   ```
+- Enviroment:
+  ```
+  printenv
+  export ENV_VAR=value
+  sudo su
+  vi /root/.env
+  vi /root/.profile [set -o allexport; source /root/.env; set o+ allexport;]
+  ```
 - Path: `echo $PATH`
 - Get Ip: `nslookup <url>`
 - Encriptografia:
