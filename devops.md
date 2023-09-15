@@ -2,6 +2,12 @@
 
 ### Docker commands
 
+- Help:
+  ```
+  docker compose --help
+  docker volume --help
+  ```
+
 - Build:
   ```
   docker build .
@@ -9,7 +15,7 @@
   docker build . --tag <username>/<repository-name>:<version>
   docker compose -f <docker-compose.yml> build
   ```
-
+  
 - Start: `docker start <container-id|container-name>`
 - Run:
   ```
@@ -40,8 +46,9 @@
   docker compose -f <docker-compose.yml> up -d <service-name>
   docker compose -f <docker-compose.yml> up -d <service-name> --node-deps
   docker compose -f <docker-compose.yml> up -d --scale <service-name>=2
+  ENV_SETUP=value docker compose -f <docker-compose.yml> up -d
   ```
-
+  
 - Down:
   ```
   docker stop <container-id|container-name>
@@ -51,10 +58,11 @@
   docker compose -f <docker-compose.yml> down -v
   docker swarm leave -f
   ```
-
+  
 - Exec:
   ```
-  docker exec -it <container-name> <function>  
+  docker exec -it <container-name> <function>
+  mongo -u "<username>" -p "<password>"
   docker exec -it <container-mongo> mongo -u "<username>" -p "<password>"
   docker compose exec <service-name> <function>
   ```
@@ -65,7 +73,12 @@
   docker compose logs <service-name>
   docker compose logs <service-name> -f
   ```
-- Inspect: `docker inspect <container-name> | grep backup`
+- Inspect:
+  ```
+  docker inspect <container-name> | grep backup
+  docker network ls
+  docker info
+  ```
 
 - Image list: `docker images`
 - Container list:
@@ -88,6 +101,22 @@
   ```
   docker system prune
   docker volume rm <volume-id>
+  ```
+
+- Swarm:
+  ```
+  ip addr [eth0]
+  docker swarm init --advertise-addr <ip-address>
+  ENV_SETUP=value docker compose -f <docker-compose.yml> build
+  ENV_SETUP=value docker stack deploy -c <docker-compose.yml> <app-name>
+  ```
+- Swarm list:
+  ```
+  docker node ls
+  docker stack ls
+  docker service ls
+  docker stack services <app-name>
+  docker stack ps <app-name>
   ```
 
 - Login: `docker login <username>`
