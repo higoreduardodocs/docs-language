@@ -134,3 +134,24 @@
   docker compose -f <docker-compose.yml> pull
   docker compose -f <docker-compose.yml> pull <service-name>
   ```
+
+- SSL:
+  ```
+  FROM nginx:table-alpine
+  docker exec -it <container-name> sh
+  apk update && apk upgrade
+  apk add openssl
+  mkdir /etc/nginx/certificate
+  cd /etc/nginx/certificate
+  openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out nginx-certificate.crt -keyout nginx.key
+  vi /etc/nginx/conf.d/default.conf (1,$d | wq)
+  cd /etc/init.d/
+  nginx -s reload
+
+  FROM nginx:latest
+  docker exec -it <container-name> bash
+  ln -s /etc/nginx/conf.d/default.conf /etc/nginx/sites-enabled/
+  apt-get update
+  apt-get install certbot python3-certbot-nginx
+  certbot --nginx -d www.localhost
+  ```
