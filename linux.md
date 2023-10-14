@@ -1,5 +1,22 @@
 # Linux OS
 
+### Installs
+
+- WSL:
+  ```
+  wsl --update
+  wsl --set-default-version 2
+  wsl --install
+  ```
+- Node:
+  ```
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  sudo apt install Node.js
+  sudo apt purge nodejs
+  sudo apt autoremove
+  sudo apt install nodejs
+  ```
+
 ### Quick commands
 
 - Move/Rename Folder: `sudo mv <name-folder/> <target-folder/>`
