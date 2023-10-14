@@ -7,7 +7,7 @@
   cd ~/.ssh
 	ssh-keygen -t rsa -b 4096 -C "<email-address>" -f "<github-username>"
 	eval "$(ssh-agent -s)"
-	ssh-add -K ~/.ssh/<github-username>
+	ssh-add ~/.ssh/<github-username>
 	touch config
 	clip < ~/.ssh/github-username.pub
   ```
@@ -22,6 +22,7 @@
 - Git remote access:
   ```
 	git clone git@github.com-<github-username>:username/<reponame.git>
+  	git clone --single-branch -b "<branch-name>" <repository-name> .
 	git remote add origin git@github.com-<github-username>:<reponame.git>
 	git push
 	git pull
