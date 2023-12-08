@@ -2,8 +2,6 @@
 
 ## :dart: Overview
 
-###
-
 <details>
 <summary>:keyboard: Descrição</summary>
 
