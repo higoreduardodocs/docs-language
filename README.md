@@ -30,7 +30,8 @@
 
   ```
   git clone git@github.com-<github-username>:username/<reponame.git>
-  	git clone --single-branch -b "<branch-name>" <repository-name> .
+  git clone -b <branch-name> <repository-name> .
+  git clone --single-branch <branch-name> <repository-name>
   git remote add origin git@github.com-<github-username>:<reponame.git>
   git push
   git pull
