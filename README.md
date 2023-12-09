@@ -2,6 +2,11 @@
 
 ## Documentação das linguagens e seus frameworks:
 
+- Database: `database/branch`
+- DevOps: `devops/branch`
+- Git: `git/branch`
+- JavaScript: `javascript/branch`
+- Linux: `linux/branch`
 - PHP: `php/branch`
 - Python: `python/branch`
 
