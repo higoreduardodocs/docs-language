@@ -1,21 +1,18 @@
-# :file_folder: Documentation
+# JavaScript
 
-## Documentação das linguagens e seus frameworks:
+## :dart: Overview
 
-- PHP: `php/branch`
-- Python: `python/branch`
+<details>
+<summary>:keyboard: Descrição</summary>
 
-## :unicorn: Author
+**:mailbox_with_no_mail: Comandos**
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/higoreduardodocs">
-        <img src="https://avatars.githubusercontent.com/u/143645475?v=4" width="100px;" alt="Foto do Higor Eduardo Docs no GitHub"/><br>
-        <sub>
-          <b>Higor Eduardo Docs</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+- Vite/React: `yarn create vite`
+- Next: `yarn create next-app`
+- TailwindCSS:
+  ```
+  yarn add -D tailwindcss postcss autoprefixer
+  yarn tailwindcss init -p
+  ```
+
+</details>
