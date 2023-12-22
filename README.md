@@ -31,3 +31,19 @@
   ```
 
 </details>
+
+<details>
+<summary>:package: PostgreSQL</summary>
+
+**:mailbox_with_no_mail: Comandos**
+
+- Access bash:
+  ```
+  docker exec -it <service-name> psql -U <username> <database>
+
+  \dt
+  SELECT * FROM pg_catalog.<table>;
+  ```
+
+</details>
+
