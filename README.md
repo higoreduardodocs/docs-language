@@ -43,6 +43,10 @@
 
   \dt
   SELECT * FROM pg_catalog.<table>;
+  sudo -u postgres psql
+  ALTER USER postgres PASSWORD <password>;
+  psql -h localhost -U postgres
+  createdb -h localhost -U postgres -W <database>
   ```
 
 </details>
