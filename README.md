@@ -55,7 +55,11 @@
 - Add file: `git add <filename>`
 - Commit: `git commit -m "<commit-message>"`
 - Remote: `git remote add origin https://github.com/<github-username>/<repository-name>`
-- Push: `git push --set-upstream origin main`
+- Push:
+    ```
+    git push -u origin main
+    git push --set-upstream origin main
+    ```
 - Pull: `git pull origin main`
 - Status: `git status`
 
@@ -69,6 +73,8 @@
   git push origin <branch-name>
   git pull origin <branch-name>
   git checkout main
+  git switch main
+  git branch -d master
   ```
 
 - Historic:
