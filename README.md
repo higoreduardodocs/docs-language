@@ -2,13 +2,13 @@
 
 ## Documentação das linguagens e seus frameworks:
 
-- Database: `database/branch`
-- DevOps: `devops/branch`
-- Git: `git/branch`
-- JavaScript: `javascript/branch`
-- Linux: `linux/branch`
-- PHP: `php/branch`
-- Python: `python/branch`
+- Database: [database/branch](https://github.com/higoreduardodocs/docs-language/tree/database)
+- DevOps: [devops/branch](https://github.com/higoreduardodocs/docs-language/tree/devops)
+- Git: [git/branch](https://github.com/higoreduardodocs/docs-language/tree/git)
+- JavaScript: [javascript/branch](https://github.com/higoreduardodocs/docs-language/tree/javascript)
+- Linux: [linux/branch](https://github.com/higoreduardodocs/docs-language/tree/linux)
+- PHP: [php/branch](https://github.com/higoreduardodocs/docs-language/tree/php)
+- Python: [python/branch](https://github.com/higoreduardodocs/docs-language/tree/python)
 
 ## :unicorn: Author
 
